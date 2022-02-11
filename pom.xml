@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
   <name>jsoup Java HTML Parser</name>
 
-  <groupId>org.jsoup</groupId>
-  <artifactId>jsoup</artifactId>
-  <version>1.15.1-SNAPSHOT</version><!-- remember to update previous version below for japicmp -->
+  <groupId>com.dowjones</groupId>
+  <artifactId>org.jsoup.jsoup</artifactId>
+  <version>1.15.1.1</version><!-- remember to update previous version below for japicmp -->
   <description>jsoup is a Java library for working with real-world HTML. It provides a very convenient API for fetching URLs and extracting and manipulating data, using the best of HTML5 DOM methods and CSS selectors. jsoup implements the WHATWG HTML5 specification, and parses HTML to the same DOM as modern browsers do.</description>
   <url>https://jsoup.org/</url>
   <inceptionYear>2009</inceptionYear>
@@ -250,18 +250,18 @@
     </resources>
   </build>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Release Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
+ <distributionManagement>
+        <repository>
+            <id>artifactory</id>
+            <name>artifactory-releases</name>
+            <url>https://artifactory.dowjones.io:443/artifactory/djsp-pubedit-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>artifactory-snapshots</id>
+            <name>artifactory-snapshots</name>
+            <url>https://artifactory.dowjones.io:443/artifactory/djsp-pubedit-release-local</url>
+        </snapshotRepository>
+    </distributionManagement>
 
   <profiles>
     <profile>
